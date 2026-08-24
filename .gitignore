@@ -1,0 +1,9 @@
+﻿data/raw/
+data/final/
+*.csv
+*.xlsx
+*.log
+.env
+__pycache__/
+*.pyc
+venv/
