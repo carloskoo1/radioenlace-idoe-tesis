@@ -1,9 +1,26 @@
-﻿data/raw/
-data/final/
+﻿# Datos sensibles o pesados
+data/raw/*
+data/final/*
 *.csv
 *.xlsx
 *.log
-.env
+
+# Mantener estructura de carpetas
+!data/.gitkeep
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/final/.gitkeep
+!outputs/.gitkeep
+!outputs/tablas/.gitkeep
+!outputs/figuras/.gitkeep
+!outputs/logs/.gitkeep
+
+# Python
 __pycache__/
 *.pyc
 venv/
+.env
+
+# Sistema
+.DS_Store
+Thumbs.db

@@ -6,16 +6,33 @@ El proyecto implementa un pipeline de procesamiento de datos para calcular estad
 
 ## Índices implementados
 
-- IDOE-RF: índice radioeléctrico no circular construido con RSSI, SNR y MCS.
-- IDOE-OP: índice operativo ampliado construido con RSSI, SNR, MCS y tasa de datos.
+- **IDOE-RF**: índice radioeléctrico no circular construido con RSSI, SNR y MCS normalizados.
+- **IDOE-OP**: índice operativo ampliado construido con RSSI, SNR, MCS y tasa de datos.
 
-## Estructura
+## Estructura del repositorio
 
 - scripts/: scripts de procesamiento y análisis.
-- data/: datasets locales no incluidos en el repositorio.
-- outputs/: tablas, figuras y resultados generados.
+- data/raw/: ubicación local de archivos CSV crudos. No se suben al repositorio.
+- data/processed/: archivos procesados intermedios. No se suben al repositorio.
+- data/final/: dataset final operativo. No se sube al repositorio.
+- outputs/tablas/: tablas generadas por el análisis.
+- outputs/figuras/: figuras generadas por el análisis.
+- outputs/logs/: registros de ejecución.
 - docs/: documentación metodológica del pipeline.
+
+## Flujo general
+
+1. Unificación de CSV.
+2. Limpieza y validación del dataset.
+3. Estadísticos descriptivos.
+4. Prueba de normalidad.
+5. Correlaciones Pearson y Spearman.
+6. Cálculo del IDOE-RF.
+7. Cálculo del IDOE-OP y clasificación operativa.
+8. Análisis de sensibilidad de pesos.
+9. Regresión lineal.
+10. Generación de figuras.
 
 ## Nota sobre datos
 
-Los datos crudos no se incluyen por contener información operativa del radioenlace.
+Los datos crudos no se incluyen en el repositorio por contener información operativa del radioenlace. Para reproducibilidad, puede utilizarse una muestra anonimizada.
